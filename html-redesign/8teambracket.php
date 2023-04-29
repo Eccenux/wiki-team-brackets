@@ -14,10 +14,15 @@
 		<div>{{{RD3|Finał}}}</div>
 	</div>
 	<?php
+		$rounds = 3;
 		$rd=1;
+		$pairs = 4;
 		$t=1;
+		for ($p=1; $p<=$pairs; $p++) {
+			include('pair.html');
+			$t+=2;
+		}
 	?>
-	<?php include('pair.html') ?>
 </div>
 
 </body>
