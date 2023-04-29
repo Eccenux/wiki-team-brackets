@@ -15,12 +15,17 @@
 	</div>
 	<?php
 		$rounds = 3;
-		$rd=1;
 		$pairs = 4;
-		$t=1;
-		for ($p=1; $p<=$pairs; $p++) {
-			include('pair.html');
-			$t+=2;
+		for ($rd=1; $rd<=$rounds; $rd++) {
+			$t=1;
+			if ($pairs <= 0) {
+				break;
+			}
+			for ($p=1; $p<=$pairs; $p++) {
+				include('pair.html');
+				$t+=2;
+			}
+			$pairs>>=1;
 		}
 	?>
 </div>
