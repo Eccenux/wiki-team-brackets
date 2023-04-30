@@ -18,3 +18,7 @@ The goal is to make this at least a bit responsive.
 - Refactor CSS to be more generic? Or just add 64 teams variant.
 - Try to make a new CSS variant that would re-create something like the split layout: https://pl.wikipedia.org/wiki/Szablon:64TeamBracket-split
 	With CSS alone I would probably need to use a layout that only shows QF once.
+
+
+Lines loose inspiration:
+https://codepen.io/tutsplus/pen/MWedpoj
