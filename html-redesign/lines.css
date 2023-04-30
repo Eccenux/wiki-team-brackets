@@ -19,15 +19,14 @@
 	--black: black;
 
 	--line-color: red;
-	--line-width: 20px;
+	--line-width: 10px;
 	--line-thick: 2px;
 	--team-col-gap: calc(var(--line-width) * 2);
+	--team-row-gap: .5em;
 }
 
 .teambracket-8 {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	max-width: max-content;
+	grid-template-columns: repeat(3, 1fr var(--line-thick));
 	column-gap: var(--team-col-gap);
 }
 
@@ -41,7 +40,7 @@
 	top: 50%;
 	left: 0%;
 	transform: translate(-100%, -50%);
-	width: var(--line-width);
+	width: calc(var(--line-width) + 2.5 * var(--team-row-gap) + var(--line-thick));
 	height: var(--line-thick);
 	background: var(--line-color);
 }
@@ -62,4 +61,55 @@
 }
 .pair.rd-3::after {
 	display: none;
+}
+
+/* vertical lines */
+.line {
+	background: var(--line-color);
+	--translate-x: calc(-.5 * var(--team-col-gap) - var(--line-thick));
+}
+.line.rd-1 { grid-column: 2;}
+.line.rd-2 { grid-column: 4;}
+
+.line.r-2 { grid-row: 2;}
+.line.r-3 { grid-row: 3;}
+.line.r-4 { grid-row: 4;}
+.line.r-5 { grid-row: 5;}
+.line.r-6 { grid-row: 6;}
+.line.r-7 { grid-row: 7;}
+.line.r-8 { grid-row: 8;}
+
+/* unwanted cells */
+.line.rd-1.r-5 { display: none; }
+
+.line.rd-2.r-2 { display: none; }
+.line.rd-2.r-8 { display: none; }
+
+/* middle lines higher */
+.line.rd-1.r-3,
+.line.rd-1.r-7,
+.line.rd-2.r-4,
+.line.rd-2.r-5,
+.line.rd-2.r-6
+{
+	height: calc(100% + var(--team-row-gap) * 2);
+	transform: translate(var(--translate-x), calc(-1 * var(--team-row-gap)));
+}
+
+/* top lines half */
+.line.rd-1.r-2,
+.line.rd-1.r-6,
+.line.rd-2.r-3
+{
+	height: 50%;
+	transform: translate(var(--translate-x), 100%);
+}
+
+/* bottom lines half */
+.line.rd-1.r-4,
+.line.rd-1.r-8,
+.line.rd-2.r-7
+{
+	height: 50%;
+	transform: translate(var(--translate-x), 0%);
 }
