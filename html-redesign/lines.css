@@ -1,48 +1,37 @@
-/* rounds */
-/*
-.rd-1 {	grid-column: 1;}
-.rd-2 {	grid-column: 2;}
-.rd-3 {	grid-column: 3;}
-
-.rd-1.t-1 {	grid-row: 2;}
-.rd-1.t-2 {	grid-row: 4;}
-.rd-1.t-3 {	grid-row: 6;}
-.rd-1.t-4 {	grid-row: 8;}
-
-.rd-2.t-1 {	grid-row: 3;}
-.rd-2.t-2 {	grid-row: 7;}
-
-.rd-3.t-1 {	grid-row: 5;}
-*/
-
+/* settings */
 :root {
 	--black: black;
 
 	--line-color: red;
-	--line-width: 10px;
+	--line-width: 5px;
 	--line-thick: 2px;
 	--team-col-gap: calc(var(--line-width) * 2);
 	--team-row-gap: .5em;
 }
 
+/* make room for lines */
 .teambracket-8 {
 	grid-template-columns: repeat(3, 1fr var(--line-thick));
 	column-gap: var(--team-col-gap);
 }
 
+/* horizontal lines common */
 .pair {
 	position: relative;
 }
-/* line back from pair (left) */
-.pair::before {
+.pair::before,
+.pair::after {
 	content: "";
 	position: absolute;
+	height: var(--line-thick);
+	background: var(--line-color);
+}
+/* line back from pair (left) */
+.pair::before {
 	top: 50%;
 	left: 0%;
 	transform: translate(-100%, -50%);
-	width: calc(var(--line-width) + 2.5 * var(--team-row-gap) + var(--line-thick));
-	height: var(--line-thick);
-	background: var(--line-color);
+	width: calc(var(--line-width) + .5 * var(--team-col-gap));
 }
 .pair.rd-1::before {
 	display: none;
@@ -50,14 +39,11 @@
 
 /* line to front of pair (right) */
 .pair::after {
-	content: "";
-	position: absolute;
 	top: 50%;
-	left: calc(100% + var(--line-width));
+	left: calc(100% + var(--width));
 	transform: translate(-100%, -50%);
-	width: var(--line-width);
-	height: var(--line-thick);
-	background: var(--line-color);
+	width: var(--width);
+	--width: calc(var(--line-width) + .5 * var(--team-col-gap) + var(--line-thick));
 }
 .pair.rd-3::after {
 	display: none;
@@ -66,7 +52,8 @@
 /* vertical lines */
 .line {
 	background: var(--line-color);
-	--translate-x: calc(-.5 * var(--team-col-gap) - var(--line-thick));
+	/* --translate-x: calc(-.5 * var(--team-col-gap) - var(--line-thick)); */
+	--translate-x: 0;
 }
 .line.rd-1 { grid-column: 2;}
 .line.rd-2 { grid-column: 4;}
