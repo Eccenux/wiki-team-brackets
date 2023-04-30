@@ -32,6 +32,9 @@
 .team {
 	display: flex;
 }
+.team>.team {
+	flex: 1;
+}
 
 /* colors */
 .headers>div,

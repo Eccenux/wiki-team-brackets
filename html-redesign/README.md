@@ -21,4 +21,15 @@ The goal is to make this at least a bit responsive.
 
 
 Lines loose inspiration:
-https://codepen.io/tutsplus/pen/MWedpoj
+* https://codepen.io/tutsplus/pen/MWedpoj
+
+Brackets:
+* https://pl.wikipedia.org/wiki/Szablon:64TeamBracket-split
+* https://pl.wikipedia.org/wiki/Szablon:8TeamBracket
+
+Testing:
+* http://localhost/wiki-varia/team-brackets/html-redesign/8teambracket.php
+* https://pl.wikipedia.org/wiki/Wikipedysta:Nux/test_teambracket
+* https://pl.wikipedia.org/wiki/Wikipedysta:Nux/test_teambracket/8tpl
+* https://pl.wikipedia.org/wiki/Szablon:Nux/test_teambracket/8tpl-main.css
+* https://pl.wikipedia.org/wiki/Szablon:Nux/test_teambracket/8tpl-lines.css
