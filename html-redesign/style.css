@@ -2,9 +2,10 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	max-width: max-content;
+	gap: .5em;
 }
 .headers {
-	grid-column-end: span 3;
+	display: contents;
 }
 
 .rd-1 {	grid-column: 1;}
