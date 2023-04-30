@@ -4,10 +4,16 @@
 	max-width: max-content;
 	gap: .5em;
 }
+
+/* top (round names/info) */
 .headers {
 	display: contents;
 }
+.headers>div {
+	text-align: center;
+}
 
+/* rounds */
 .rd-1 {	grid-column: 1;}
 .rd-2 {	grid-column: 2;}
 .rd-3 {	grid-column: 3;}
@@ -22,6 +28,18 @@
 
 .rd-3.t-1 {	grid-row: 5;}
 
+/* cell layout */
 .team {
 	display: flex;
+}
+
+/* colors */
+.headers>div,
+.team>div {
+	border: 1px solid #aaa;
+	background-color: #f9f9f9;
+	padding: .2em;
+}
+.team .seed {
+	background-color: #f2f2f2;
 }
