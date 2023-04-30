@@ -1,0 +1,26 @@
+.teambracket-8 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: max-content;
+}
+.headers {
+	grid-column-end: span 3;
+}
+
+.rd-1 {	grid-column: 1;}
+.rd-2 {	grid-column: 2;}
+.rd-3 {	grid-column: 3;}
+
+.rd-1.t-1 {	grid-row: 2;}
+.rd-1.t-2 {	grid-row: 4;}
+.rd-1.t-3 {	grid-row: 6;}
+.rd-1.t-4 {	grid-row: 8;}
+
+.rd-2.t-1 {	grid-row: 3;}
+.rd-2.t-2 {	grid-row: 7;}
+
+.rd-3.t-1 {	grid-row: 5;}
+
+.team {
+	display: flex;
+}

@@ -1,7 +1,7 @@
 The goal is to make this at least a bit responsive.
 
-- Make a new html structure with some simple divs.
-- Maybe make a basic layout with a grid (recreate current layout of boxes). https://pl.wikipedia.org/wiki/Szablon:8TeamBracket
+- ✅Make a new html structure with some simple divs.
+- ✅Maybe make a basic layout with a grid (recreate current layout of boxes). https://pl.wikipedia.org/wiki/Szablon:8TeamBracket
 - Add lines connecting boxes.
 - Make a bigger team bracket html. Maybe generate 64 teams (32 pairs): https://pl.wikipedia.org/wiki/Szablon:64TeamBracket
 - Refactor CSS to be more generic? Or just add 64 teams variant.
