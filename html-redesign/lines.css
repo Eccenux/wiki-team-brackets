@@ -1,0 +1,65 @@
+/* rounds */
+/*
+.rd-1 {	grid-column: 1;}
+.rd-2 {	grid-column: 2;}
+.rd-3 {	grid-column: 3;}
+
+.rd-1.t-1 {	grid-row: 2;}
+.rd-1.t-2 {	grid-row: 4;}
+.rd-1.t-3 {	grid-row: 6;}
+.rd-1.t-4 {	grid-row: 8;}
+
+.rd-2.t-1 {	grid-row: 3;}
+.rd-2.t-2 {	grid-row: 7;}
+
+.rd-3.t-1 {	grid-row: 5;}
+*/
+
+:root {
+	--black: black;
+
+	--line-color: red;
+	--line-width: 20px;
+	--line-thick: 2px;
+	--team-col-gap: calc(var(--line-width) * 2);
+}
+
+.teambracket-8 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: max-content;
+	column-gap: var(--team-col-gap);
+}
+
+.pair {
+	position: relative;
+}
+/* line back from pair (left) */
+.pair::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(-100%, -50%);
+	width: var(--line-width);
+	height: var(--line-thick);
+	background: var(--line-color);
+}
+.pair.rd-1::before {
+	display: none;
+}
+
+/* line to front of pair (right) */
+.pair::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: calc(100% + var(--line-width));
+	transform: translate(-100%, -50%);
+	width: var(--line-width);
+	height: var(--line-thick);
+	background: var(--line-color);
+}
+.pair.rd-3::after {
+	display: none;
+}
