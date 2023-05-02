@@ -77,8 +77,8 @@
 .line.rd-2.r-5,
 .line.rd-2.r-6
 {
-	height: calc(100% + var(--team-row-gap) * 2);
-	transform: translate(var(--translate-x), calc(-1 * var(--team-row-gap)));
+	height: calc(100% + var(--team-row-gap) * 2 + 2px);
+	transform: translate(var(--translate-x), calc(-1 * var(--team-row-gap) - 1px));
 }
 
 /* top lines half */
