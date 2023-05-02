@@ -5,6 +5,11 @@ The goal is to make this at least a bit responsive.
 - ✅Add lines connecting boxes.
 	- ✅Horizontal lines
 	- ✅Vertical lines
+- Wiki CSS compat
+	- Convert CSS variables to less.
+	- Create CSS with lessc.
+	- BTW. Nest with main selector as namespace.
+	- Test in practice.
 - [XOR] Generate classes for lines in PHP. CSS will be simpler.
 	- Mark top, bottom and middle cells.
 	- Refactor CSS.
